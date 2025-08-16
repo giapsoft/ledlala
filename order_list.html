@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Báo cáo đơn hàng LedLala</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- PapaParse: Thư viện đọc file CSV -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  <!-- Crypto-JS: Thư viện mã hóa MD5 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0a0a0a;
+      color: #e2e8f0;
+    }
+
+    .form-input {
+      background-color: #1e293b;
+      border-color: #334155;
+    }
+
+    .form-input:focus {
+      --tw-ring-color: #38bdf8;
+      border-color: #38bdf8;
+    }
+
+    .loader {
+      border: 4px solid #334155;
+      border-top: 4px solid #38bdf8;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body class="antialiased flex items-center justify-center min-h-screen p-4">
+
+  <!-- Container chính -->
+  <div id="app-container" class="w-full max-w-7xl">
+
+    <!-- Màn hình đăng nhập -->
+    <div id="login-container" class="max-w-md mx-auto hidden">
+      <div class="bg-slate-900 p-8 rounded-lg border border-slate-800">
+        <h1 class="text-2xl font-bold text-center mb-1 text-white">Xác thực quyền truy cập</h1>
+        <p class="text-center text-slate-400 mb-6">Vui lòng nhập mật khẩu cho mã giới thiệu <span id="ref-display"
+            class="font-bold text-sky-400"></span>.</p>
+        <form id="login-form">
+          <input type="password" id="password-input"
+            class="form-input text-white text-center text-lg rounded-lg block w-full p-2.5 mb-4" required>
+          <button type="submit"
+            class="w-full text-white bg-sky-600 hover:bg-sky-700 font-bold rounded-lg text-md px-5 py-3 text-center">
+            Truy cập
+          </button>
+          <p id="error-message" class="text-red-400 text-sm text-center mt-4 hidden">Mật khẩu không chính xác.</p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Màn hình hiển thị nội dung -->
+    <div id="content-container" class="hidden">
+
+      <header class="text-center mb-10">
+        <h1 class="text-4xl font-bold bg-gradient-to-r from-sky-400 to-purple-400 text-transparent bg-clip-text mb-2">
+          Báo cáo đơn hàng
+        </h1>
+        <p class="text-slate-400">Dữ liệu dành cho mã giới thiệu: <span id="ref-header"
+            class="font-bold text-sky-400"></span></p>
+
+      </header>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-lg shadow-lg overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="min-w-full divide-y divide-slate-700">
+            <thead class="bg-slate-800">
+              <tr>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-300 uppercase tracking-wider">
+                  Thời gian</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-300 uppercase tracking-wider">
+                  Khách hàng</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-300 uppercase tracking-wider">
+                  Chi tiết đơn hàng</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-300 uppercase tracking-wider">
+                  Trạng Thái</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-300 uppercase tracking-wider">
+                  Hoa hồng</th>
+              </tr>
+            </thead>
+            <tbody id="orders-table-body" class="bg-slate-900 divide-y divide-slate-800">
+              <tr>
+                <td colspan="4" class="p-8 text-center">
+                  <div id="loading" class="flex flex-col items-center justify-center">
+                    <div class="loader"></div>
+                    <p class="mt-4 text-slate-400">Đang tải dữ liệu đơn hàng...</p>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- Tổng hoa hồng (nổi ở chân trang) -->
+      <footer id="commission-footer"
+        class="fixed bottom-0 left-0 right-0 bg-slate-900/80 backdrop-blur-sm border-t border-slate-800 p-4 shadow-lg">
+
+        <div class="max-w-7xl mx-auto flex justify-end items-center">
+          <button id="refresh-button" style="    background: rebeccapurple;
+    color: white;
+    padding: 4px;
+    margin: 4px;
+    border-radius: 4px;" title="Tải lại dữ liệu" class="text-slate-400 hover:text-sky-400 transition-colors">
+            Tải lại
+          </button>
+          <span class="text-slate-300 mr-4">Tổng hoa hồng thành công:</span>
+          <span id="total-commission" class="text-2xl font-bold text-green-400">0đ</span>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Màn hình truy cập bị từ chối -->
+    <div id="access-denied-container" class="text-center hidden">
+      <h1 class="text-3xl font-bold text-red-500">Truy cập bị từ chối</h1>
+      <p class="text-slate-400 mt-2">Mã giới thiệu không hợp lệ hoặc bạn không có quyền truy cập trang này.</p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // --- CẤU HÌNH ---
+      const googleSheetCsvUrl = 'https://api.allorigins.win/raw?url=https://docs.google.com/spreadsheets/d/e/2PACX-1vSjp6lWwRmjTMvybW-sXhl4ImqsMzaJCpUYDYX8zMbwunrIY2y9s2d3H739HNt0Y0oY2ITqix4MqwAW/pub?output=csv' + '&_=' + new Date().getTime();
+      const validRefs = ['SALE10', 'VIP2025', 'GIAPSOFT'];
+      const refPasswords = {
+        'SALE10': 'c4ca4238a0b923820dcc509a6f75849b', // Mật khẩu: 1
+        'VIP2025': 'e10adc3949ba59abbe56e057f20f883e', // Mật khẩu: 123456
+        'GIAPSOFT': 'YOUR_MD5_HASH_HERE'
+      };
+      const SHIPPING_COST = 20000;
+      const COMMISSION_RATE = 0.20; // 20%
+
+      // --- LẤY CÁC PHẦN TỬ DOM ---
+      const refreshButton = document.getElementById('refresh-button');
+      const loginContainer = document.getElementById('login-container');
+      const contentContainer = document.getElementById('content-container');
+      const accessDeniedContainer = document.getElementById('access-denied-container');
+      const refDisplay = document.getElementById('ref-display');
+      const refHeader = document.getElementById('ref-header');
+      const loginForm = document.getElementById('login-form');
+      const passwordInput = document.getElementById('password-input');
+      const errorMessage = document.getElementById('error-message');
+      const tableBody = document.getElementById('orders-table-body');
+      const totalCommissionEl = document.getElementById('total-commission');
+
+      // --- LOGIC CHÍNH ---
+      const urlParams = new URLSearchParams(window.location.search);
+      const currentRef = urlParams.get('ref')?.toUpperCase();
+
+      function initialize() {
+        if (currentRef && validRefs.includes(currentRef)) {
+          // Ref hợp lệ, hiển thị form đăng nhập
+          refDisplay.textContent = currentRef;
+          refHeader.textContent = currentRef;
+          loginContainer.classList.remove('hidden');
+        } else {
+          // Ref không hợp lệ hoặc không có
+          accessDeniedContainer.classList.remove('hidden');
+        }
+      }
+
+      loginForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const enteredPassword = passwordInput.value;
+        const hashedPassword = CryptoJS.MD5(enteredPassword).toString();
+        console.log(hashedPassword);
+        if (refPasswords[currentRef] === hashedPassword) {
+          // Mật khẩu đúng
+          loginContainer.classList.add('hidden');
+          contentContainer.classList.remove('hidden');
+          fetchAndRenderOrders();
+        } else {
+          // Mật khẩu sai
+          errorMessage.classList.remove('hidden');
+        }
+      });
+
+      function fetchAndRenderOrders() {
+        Papa.parse(googleSheetCsvUrl, {
+          download: true,
+          header: true,
+          skipEmptyLines: true,
+          complete: function (results) {
+            const allOrders = results.data;
+            console.log(allOrders);
+            // Lọc đơn hàng theo ref code
+            const filteredOrders = allOrders.filter(order => (order['MaGioiThieu'] || '').toUpperCase() === currentRef);
+            renderTable(filteredOrders);
+          },
+          error: function (err) {
+            tableBody.innerHTML = `<tr><td colspan="4" class="text-center p-8 text-red-400">Lỗi tải dữ liệu.</td></tr>`;
+          }
+        });
+      }
+
+      function renderTable(orders) {
+        tableBody.innerHTML = '';
+        let totalCommission = 0;
+
+        if (orders.length === 0) {
+          tableBody.innerHTML = `<tr><td colspan="4" class="text-center p-8 text-slate-400">Chưa có đơn hàng nào cho mã giới thiệu này.</td></tr>`;
+          totalCommissionEl.textContent = '0đ';
+          return;
+        }
+
+        const reversedOrders = orders.reverse();
+        reversedOrders.forEach(order => {
+          const timestamp = order['Timestamp'] || 'N/A';
+          const hoTen = order['HoTen'] || 'N/A';
+          const phone = order['DienThoai'] || 'N/A';
+          const chiTietJson = order['ChiTietDonHang'] || '{}';
+          const trangThai = order['TrangThai'] || 'Chờ xử lý';
+          const tongTien = parseInt(order['TongTien'] || 0);
+
+          let statusColorClass = 'text-yellow-400'; // Mặc định cho "Chờ xử lý"
+          if (trangThai.toLowerCase() === 'thành công') {
+            statusColorClass = 'text-green-400';
+          } else if (trangThai.toLowerCase() === 'đã hủy') {
+            statusColorClass = 'text-red-500';
+          }
+
+          // Tính hoa hồng
+          const commissionableAmount = tongTien - SHIPPING_COST;
+          const commission = commissionableAmount > 0 ? commissionableAmount * COMMISSION_RATE : 0;
+          if (trangThai.toLowerCase() === 'thành công') {
+            totalCommission += commission;
+          }
+          let chiTietHtml = '<ul class="list-disc list-inside text-xs">';
+          try {
+            const chiTietObj = JSON.parse(chiTietJson);
+            for (const [id, qty] of Object.entries(chiTietObj)) {
+              chiTietHtml += `<li><span class="font-semibold">${id}</span>: ${qty} cái</li>`;
+            }
+          } catch (e) {chiTietHtml += '<li>Lỗi dữ liệu</li>';}
+          chiTietHtml += '</ul>';
+
+          const row = `
+                        <tr class="hover:bg-slate-800/50">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-400">${timestamp}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-white">${hoTen}<div>${phone}</div></td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-300">${chiTietHtml}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold ${statusColorClass}">${trangThai}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-green-400">${commission.toLocaleString('vi-VN', {minimumFractionDigits: 0, maximumFractionDigits: 0})}đ</td>
+                        </tr>
+                    `;
+          tableBody.innerHTML += row;
+        });
+
+        totalCommissionEl.textContent = totalCommission.toLocaleString('vi-VN', {minimumFractionDigits: 0, maximumFractionDigits: 0}) + 'đ';
+      }
+      refreshButton.addEventListener('click', function () {
+        // Hiển thị lại trạng thái loading
+        tableBody.innerHTML = `
+        <tr>
+            <td colspan="4" class="p-8 text-center">
+                <div class="flex flex-col items-center justify-center">
+                    <div class="loader"></div>
+                    <p class="mt-4 text-slate-400">Đang tải lại dữ liệu...</p>
+                </div>
+            </td>
+        </tr>`;
+        // Gọi lại hàm fetch dữ liệu
+        fetchAndRenderOrders();
+      });
+      initialize();
+    });
+
+  </script>
+
+</body>
+
+</html>
