@@ -30,6 +30,8 @@
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
     }
 
     .feature-card {
@@ -123,8 +125,8 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="relative h-[80vh] flex items-center justify-center text-center overflow-hidden">
-    <div class="absolute inset-0 bg-black opacity-50"></div>
+  <section style="background-size: cover; background-position: center; background-image: url('images/background.jpg');" class="relative h-[80vh] flex items-center justify-center text-center overflow-hidden">
+    <div class="absolute inset-0 bg-black opacity-25"></div>
 
     <div class="relative z-10 px-6">
 
@@ -156,8 +158,8 @@
             <img src="images/ledlala.png" width="80"/>
           </div>
           <h4 class="text-xl font-bold mb-2 text-white">Chế Độ Chơi Hấp Dẫn</h4>
-          <p class="text-slate-400"><span class="sub-title">Theo nhịp điệu:</span> Nhạc tới đâu, đèn sáng tới đó</p>
-          <p class="text-slate-400"> <span class="sub-title">Sáng tức thì:</span> theo từng nốt bạn đánh</p>
+          <p class="text-slate-400"><span class="sub-title">Theo nhịp điệu:</span> Nhạc tới đâu, LED sáng tới đó</p>
+          <p class="text-slate-400"> <span class="sub-title">Sáng tức thì:</span> Theo từng nốt bạn đánh</p>
         </div>
         <!-- Feature 2 -->
         <div class="feature-card p-8 rounded-2xl text-center">
@@ -216,7 +218,7 @@
           <p class="mt-4 font-bold text-lg">Đàn Xylophone</p>
         </div>
         <div class="text-center">
-          <img src="images/lyre.png"
+          <img src="images/lyre.jpg"
             onerror="this.onerror=null;this.src='https://placehold.co/400x400/334155/FFFFFF?text=Đàn+Lyre';"
             alt="Đàn Lyre" class="rounded-2xl aspect-square object-cover">
           <p class="mt-4 font-bold text-lg">Đàn Lyre</p>
