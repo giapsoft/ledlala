@@ -7,8 +7,7 @@
   <title>LedLala - Thắp Sáng Giai Điệu Của Bạn</title>
 
   <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
+  <link href="style.css" rel="stylesheet">
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,12 +25,13 @@
     }
 
     .gradient-text {
-      background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
+      background: linear-gradient(90deg, #0081ff, #ffc000, #ff00e0);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
+      -webkit-text-stroke-width: 1.5px;
+      -webkit-text-stroke-color: white;
+      font-family: sans-serif;
     }
 
     .feature-card {
@@ -109,6 +109,116 @@
       color: mediumpurple;
       font-weight: bold;
     }
+
+    .product-selector {
+      margin: auto;
+      padding: 25px 30px;
+
+      width: 100%;
+      max-width: 450px;
+    }
+
+    .product-selector h3,
+    .product-selector h4 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .product-selector h4 {
+      margin-top: 25px;
+      color: #a0a0a0;
+      font-weight: 600;
+    }
+
+    .options-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .option-btn {
+      padding: 10px 20px;
+      border: 2px solid #444;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      background-color: #2c2c2c;
+      color: #e0e0e0;
+      transition: all 0.2s ease-in-out;
+      text-align: center;
+    }
+
+    .option-btn:hover {
+      border-color: #5a5a5a;
+      background-color: #3a3a3a;
+    }
+
+    .option-btn.active {
+      background-color: #007bff;
+      color: #ffffff;
+      border-color: #007bff;
+    }
+
+    #selection-result {
+      margin-top: 25px;
+      padding: 15px;
+      background-color: #2a3a4a;
+      border: 1px solid #007bff;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: 500;
+      color: #ffffff;
+      word-wrap: break-word;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .original-price {
+      text-decoration: line-through;
+      color: #64748b;
+      /* Màu xám mờ */
+      font-size: 1.875rem;
+      /* Kích thước nhỏ hơn giá chính */
+      margin-right: 0.75rem;
+      vertical-align: middle;
+    }
+
+    #zalo-button {
+      position: fixed;
+      /* Nổi trên màn hình */
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      /* Luôn nằm trên cùng */
+      width: 60px;
+      height: 60px;
+      background-color: white;
+      border-radius: 50%;
+      /* Bo tròn */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    #zalo-button:hover {
+      transform: scale(1.1);
+      /* Hiệu ứng khi di chuột */
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    #zalo-button img {
+      width: 65%;
+      /* Kích thước icon bên trong */
+      height: auto;
+    }
   </style>
 </head>
 
@@ -125,7 +235,8 @@
   </header>
 
   <!-- Hero Section -->
-  <section style="background-size: cover; background-position: center; background-image: url('images/background.jpg');" class="relative h-[80vh] flex items-center justify-center text-center overflow-hidden">
+  <section style="background-size: cover; background-position: center; background-image: url('images/background.jpg');"
+    class="relative h-[80vh] flex items-center justify-center text-center overflow-hidden">
     <div class="absolute inset-0 bg-black opacity-25"></div>
 
     <div class="relative z-10 px-6">
@@ -154,8 +265,8 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Feature 1 -->
         <div class="feature-card p-8 rounded-2xl text-center">
-          <div class="mb-4 inline-block p-4 bg-indigo-500/10 rounded-xl">
-            <img src="images/ledlala.png" width="80"/>
+          <div class="mb-4 inline-block p-4 rounded-xl">
+            <img src="images/ledlala.png" width="80" />
           </div>
           <h4 class="text-xl font-bold mb-2 text-white">Chế Độ Chơi Hấp Dẫn</h4>
           <p class="text-slate-400"><span class="sub-title">Theo nhịp điệu:</span> Nhạc tới đâu, LED sáng tới đó</p>
@@ -163,16 +274,17 @@
         </div>
         <!-- Feature 2 -->
         <div class="feature-card p-8 rounded-2xl text-center">
-          <div class="mb-4 inline-block p-4 bg-purple-500/10 rounded-xl">
-            <img src="images/sing.png" width="80"/>
+          <div class="mb-4 inline-block p-4 rounded-xl">
+            <img src="images/sing.png" width="80" />
           </div>
           <h4 class="text-xl font-bold mb-2 text-white">Sáng Tác Bằng Giọng Hát</h4>
-          <p class="text-slate-400">Chỉ cần <span class="sub-title">lala</span> giai điệu vào ứng dụng, LedLala sẽ tự động chuyển thành nốt nhạc,
+          <p class="text-slate-400">Chỉ cần <span class="sub-title">lala</span> giai điệu vào ứng dụng, LedLala sẽ tự
+            động chuyển thành nốt nhạc,
             thêm hợp âm và tạo ra bản nhạc của riêng bạn.</p>
         </div>
         <div class="feature-card p-8 rounded-2xl text-center">
-          <div class="mb-4 inline-block p-4 bg-purple-500/10 rounded-xl">
-              <img src="images/qr.png" width="80"/>
+          <div class="mb-4 inline-block p-4 rounded-xl">
+            <img src="images/qr.png" width="80" />
           </div>
           <h4 class="text-xl font-bold mb-2 text-white">Cùng Chia Sẻ Kho Nhạc</h4>
           <p class="text-slate-400">Mỗi bài hát đều được gắn QR code, dễ dàng chia sẻ cho bạn bè cùng chơi.</p>
@@ -180,12 +292,12 @@
 
         <!-- Feature 4 -->
         <div class="feature-card p-8 rounded-2xl text-center">
-          <div class="mb-4 inline-block p-4 bg-fuchsia-500/10 rounded-xl">
-           <img src="images/flexible.png" width="80"/>
+          <div class="mb-4 inline-block p-4 rounded-xl">
+            <img src="images/flexible.png" width="80" />
           </div>
           <h4 class="text-xl font-bold mb-2 text-white">Thiết Kế linh hoạt</h4>
           <p class="text-slate-400">Một bộ điều khiển duy nhất có thể kết nối với nhiều dải LED khác nhau cho Kalimba,
-            Trống Tank, Xylophone và Lyre.</p>
+            Trống Tank, và Xylophone.</p>
         </div>
       </div>
     </div>
@@ -198,7 +310,7 @@
         <h3 class="text-3xl md:text-4xl font-bold mb-2">Dành cho những âm thanh mộc mạc</h3>
         <p class="text-slate-400">LedLala vừa vặn với các nhạc cụ yêu thích của bạn.</p>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+      <div class="grid grid-cols-3 md:grid-cols-3 gap-4 md:gap-8">
         <div class="text-center">
           <img src="images/kalimba.jpg"
             onerror="this.onerror=null;this.src='https://placehold.co/400x400/334155/FFFFFF?text=Kalimba';"
@@ -217,12 +329,7 @@
             alt="Đàn Xylophone" class="rounded-2xl aspect-square object-cover">
           <p class="mt-4 font-bold text-lg">Đàn Xylophone</p>
         </div>
-        <div class="text-center">
-          <img src="images/lyre.jpg"
-            onerror="this.onerror=null;this.src='https://placehold.co/400x400/334155/FFFFFF?text=Đàn+Lyre';"
-            alt="Đàn Lyre" class="rounded-2xl aspect-square object-cover">
-          <p class="mt-4 font-bold text-lg">Đàn Lyre</p>
-        </div>
+
       </div>
     </div>
   </section>
@@ -234,19 +341,32 @@
 
       <header class="mb-8">
         <h1 class="text-4xl md:text-5xl font-black text-white mb-2">Ưu đãi Ra mắt</h1>
-        <p class="text-lg text-sky-400 font-medium">Giá bộ điều khiển đang tăng dần, mua ngay để có giá tốt nhất!</p>
+        <p class="text-lg text-sky-400 font-medium">Giá đang tăng dần, mua ngay để có giá tốt nhất!</p>
+
+      </header>
+      <div class="product-selector">
+        <h3>♬ Chọn Nhạc Cụ</h3>
+        <div id="instrument-type-container" class="options-container"></div>
+        <div id="variants-wrapper"></div>
+      </div>
+      <!-- Hiển thị giá -->
+      <div class="mb-8">
         <div class="mt-4 text-sm text-gray-400 space-y-1">
           <p><strong>Ngày phát hành:</strong> <span id="start-date-display"></span></p>
           <p><strong>Ưu đãi kết thúc vào:</strong> <span id="end-date-display"></span></p>
         </div>
-      </header>
-
-      <!-- Hiển thị giá -->
-      <div class="mb-8">
         <div class="flex justify-between items-center text-gray-400 mb-2">
-          <span id="start-price">99.000đ</span>
-          <span id="max-price">359.000đ</span>
+          <div>
+            <div>Giá mở bán</div>
+            <span id="start-price">99.000đ</span>
+          </div>
+          <div>
+            <div>Giá niêm yết</div>
+            <span id="max-price">359.000đ</span>
+          </div>
+
         </div>
+
         <!-- Progress Bar -->
         <div class="w-full bg-gray-700 rounded-full h-4">
           <div id="progress-bar" class="bg-gradient-to-r from-sky-500 to-indigo-500 h-4 rounded-full progress-bar-inner"
@@ -258,7 +378,7 @@
       <div class="mb-6">
         <p class="text-lg text-gray-300">Giá hiện tại:</p>
         <p id="current-price" class="text-6xl md:text-7xl font-bold text-white price-display">...đ</p>
-        <p>/1 bộ điều khiển</p>
+        <p>/1 <span class="product-name"></span></p>
       </div>
 
       <!-- Đồng hồ đếm ngược -->
@@ -280,11 +400,9 @@
           class="bg-sky-600 hover:bg-sky-700 text-white font-bold py-4 px-10 rounded-full text-xl transition-transform duration-300 inline-block hover:scale-105">
           Mua ngay với giá <span id="cta-price">...</span>
         </a>
-        
+
       </div>
-      <p style="padding-top: 12px">
-     <span style="color: darkgrey">1 bộ điều khiển có thể kết nối tới bất cứ bộ led nào</span>
-      </p>
+
     </div>
   </section>
   <!-- Order Section -->
@@ -299,7 +417,7 @@
 
       <!-- A) Thông tin người nhận -->
       <section class="mb-10">
-        <h2 class="text-2xl font-bold text-white mb-4 border-b border-slate-700 pb-2">A. Thông tin người nhận</h2>
+        <h2 class="text-2xl font-bold text-white mb-4 border-b border-slate-700 pb-2">Thông tin người nhận</h2>
         <div class="space-y-4">
           <div>
             <label for="ho-ten" class="block mb-2 text-sm font-medium text-slate-300">Họ và tên</label>
@@ -322,21 +440,34 @@
 
       <!-- B) Thông tin đơn hàng -->
       <section class="mb-10">
-        <h2 class="text-2xl font-bold text-white mb-4 border-b border-slate-700 pb-2">B. Chọn sản phẩm</h2>
-        <div id="product-list" class="space-y-3">
-          <!-- Danh sách sản phẩm sẽ được JS chèn vào đây -->
+        <h2 class="text-2xl font-bold text-white mb-4 border-b border-slate-700 pb-2">Sản phẩm đặt mua</h2>
+        <div class="space-y-4">
+          <div class="product-name text-lg font-medium text-slate-300">
+          </div>
+
+          <div class="mt-2">
+            <a href="#saleoff" class="inline-block text-sm text-sky-400 hover:text-sky-300 transition-colors">
+              <i data-lucide="arrow-left-right" class="inline-block w-4 h-4 mr-1"></i>
+              Chọn LED cho nhạc cụ khác?
+            </a>
+          </div>
+
+          <div class="flex items-center space-x-3 mt-4">
+            <label for="quantity-input" class="text-sm font-medium text-slate-300">Số lượng:</label>
+            <div class="flex items-center">
+              <button type="button" id="qty-minus" class="qty-btn rounded-l-md">-</button>
+              <input type="number" id="quantity-input" value="1" min="1"
+                class="form-input w-16 text-center text-white font-bold">
+              <button type="button" id="qty-plus" class="qty-btn rounded-r-md">+</button>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- Tổng tiền và các trường ẩn -->
       <section class="space-y-2 text-right mb-6">
         <div class="flex justify-between">
-          <p class="text-slate-400">Tạm tính:</p>
-          <p id="subtotal-price" class="text-lg text-white">0đ</p>
-        </div>
-        <div class="flex justify-between">
           <p class="text-slate-400">Phí vận chuyển:</p>
-          <p id="shipping-cost" class="text-lg text-white">0đ</p>
+          <p id="shipping-cost" class="text-lg text-white">20.000đ</p>
         </div>
         <div class="flex justify-between items-center border-t border-slate-700 pt-2 mt-2">
           <p class="text-lg font-bold text-white">Tổng cộng:</p>
@@ -351,8 +482,9 @@
 
       <button type="submit"
         class="w-full text-white bg-sky-600 hover:bg-sky-700 focus:ring-4 focus:outline-none focus:ring-sky-800 font-bold rounded-lg text-lg px-5 py-3 text-center">
-        <div><img src="images/ledlala.png" width="40" style="display: inline-block; padding: 2px;"/>
-        <span>Hoàn tất đặt hàng</span></div>
+        <div><img src="images/ledlala.png" width="40" style="display: inline-block; padding: 2px;" />
+          <span>Hoàn tất đặt hàng</span>
+        </div>
       </button>
     </form>
   </section>
@@ -362,11 +494,15 @@
     <div class="container mx-auto px-6 py-8 text-center text-slate-400">
       <p>&copy; 2025 LedLala. Mọi quyền được bảo lưu.</p>
       <p class="text-sm mt-2">Một sản phẩm của GiapSoft</p>
+      <div style="height: 200px"></div>
     </div>
   </footer>
 
   <script src="script_encrypted.js"></script>
-
+  <a href="https://zalo.me/84986254079" id="zalo-button" target="_blank" rel="noopener noreferrer"
+    title="Liên hệ qua Zalo">
+    <img src="images/zalo.png" alt="Contact Zalo">
+  </a>
 </body>
 
 </html>
