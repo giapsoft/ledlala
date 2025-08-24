@@ -1,1 +1,278 @@
-function _0x575c(_0x42f9e4,_0x533c71){const _0x358d0c=_0x358d();return _0x575c=function(_0x575cc2,_0x5b4053){_0x575cc2=_0x575cc2-0x11b;let _0x40e641=_0x358d0c[_0x575cc2];return _0x40e641;},_0x575c(_0x42f9e4,_0x533c71);}function _0x358d(){const _0x39bcd3=['Đã\x20có\x20lỗi\x20xảy\x20ra,\x20vui\x20lòng\x20thử\x20lại.','error','then','startPrice','parentElement','variants','start-price','tank11','.variant-option','72rwAfin','forEach','getMonth','vi-VN','.variant-group','.countdown-bar','innerHTML','kalimba','quantity-input','tank','toLocaleString','padStart','47299yxqJYg','countdown','toLowerCase','search','lent','<span\x20class=\x22font-bold\x20text-white\x22>Đã\x20đạt\x20giá\x20cuối\x20cùng!</span>','floor','value','539844oQIgnG','Bộ\x20LED\x20cho\x20trống\x20lưỡi\x20thép\x2013\x20nốt','Error:','ref','cta-price','append','Bộ\x20LED\x20cho\x20trống\x20lưỡi\x208\x20nốt','no-cors','catch','idPrefix','shipping-cost','15\x20nốt','Bộ\x20LED\x20cho\x20trống\x20lưỡi\x20thép\x2011\x20nốt','typeKey','active','preventDefault','POST','action','thuynt','Trống\x20Lưỡi\x20Thép','classList','replace','-variants','2926496nBCamX','ceil','stringify','option-btn\x20variant-option','startsWith','Đơn\x20hàng\x20của\x20bạn\x20đã\x20được\x20gửi\x20đi!\x20Cảm\x20ơn\x20bạn.','1004mCwCWk','closest','giapnt','type','textContent','target','name','8\x20nốt','qty-minus','2889500qszVpJ','Bộ\x20LED\x20cho\x20trống\x20lưỡi\x20thép\x2015\x20nốt','addEventListener','636twjOWW','tank8','.product-name','total-price','className','click','Bộ\x20LED\x20cho\x20đàn\x20Kalimba\x2021\x20phím','lamnt','21\x20phím','querySelectorAll','instrument-type-container','Bạn\x20vui\x20lòng\x20chọn\x20ít\x20nhất\x20một\x20sản\x20phẩm.','ref_code','input','createElement','13\x20nốt','dataset','qty-plus','.option-btn','toUpperCase','11\x20nốt','toggle','orderForm','5zSpzSN','now','hidden','chi_tiet_don_hang','div','reset','location','appendChild','find','current-price','Đàn\x20Kalimba','253xiesDx','236301msiBAq','text','5058kBGHVN','getFullYear','style','get','width','950240wWIXVO','innerText','tank15','getDate','getElementById'];_0x358d=function(){return _0x39bcd3;};return _0x358d();}const _0x1be8e3=_0x575c;(function(_0x17de47,_0xf68b81){const _0x379be1=_0x575c,_0x5544fb=_0x17de47();while(!![]){try{const _0xab7640=parseInt(_0x379be1(0x17d))/0x1+parseInt(_0x379be1(0x14e))/0x2*(parseInt(_0x379be1(0x17f))/0x3)+-parseInt(_0x379be1(0x157))/0x4*(parseInt(_0x379be1(0x171))/0x5)+parseInt(_0x379be1(0x15a))/0x6*(parseInt(_0x379be1(0x129))/0x7)+-parseInt(_0x379be1(0x148))/0x8+-parseInt(_0x379be1(0x11d))/0x9*(-parseInt(_0x379be1(0x184))/0xa)+-parseInt(_0x379be1(0x17c))/0xb*(parseInt(_0x379be1(0x131))/0xc);if(_0xab7640===_0xf68b81)break;else _0x5544fb['push'](_0x5544fb['shift']());}catch(_0x184159){_0x5544fb['push'](_0x5544fb['shift']());}}}(_0x358d,0x6a7fb),lucide['createIcons']());const formatDate=_0x5535b7=>{const _0x26c3da=_0x575c,_0x3bf7cf=new Date(_0x5535b7),_0x16ce05=String(_0x3bf7cf[_0x26c3da(0x187)]())['padStart'](0x2,'0'),_0x32495e=String(_0x3bf7cf[_0x26c3da(0x11f)]()+0x1)[_0x26c3da(0x128)](0x2,'0'),_0x4e86cb=_0x3bf7cf[_0x26c3da(0x180)]();return _0x16ce05+'/'+_0x32495e+'/'+_0x4e86cb;};document[_0x1be8e3(0x159)]('DOMContentLoaded',function(){const _0x28cd52=_0x1be8e3,_0x2a2d72=[{'id':'kalimba17','name':'Bộ\x20LED\x20cho\x20đàn\x20Kalimba\x2017\x20phím','startPrice':0x3f3b8,'maxPrice':0x72808},{'id':'kalimba21','name':_0x28cd52(0x160),'startPrice':0x41ac8,'maxPrice':0x74f18},{'id':_0x28cd52(0x186),'name':_0x28cd52(0x158),'startPrice':0x441d8,'maxPrice':0x79d38},{'id':'tank13','name':_0x28cd52(0x132),'startPrice':0x41ac8,'maxPrice':0x74f18},{'id':_0x28cd52(0x11b),'name':_0x28cd52(0x13d),'startPrice':0x3f3b8,'maxPrice':0x72808},{'id':_0x28cd52(0x15b),'name':_0x28cd52(0x137),'startPrice':0x3cca8,'maxPrice':0x700f8}],_0x393ca3={'kalimba':{'name':_0x28cd52(0x17b),'idPrefix':_0x28cd52(0x124),'variants':[{'value':0x11,'text':'17\x20phím'},{'value':0x15,'text':_0x28cd52(0x162)}]},'tankdrum':{'name':_0x28cd52(0x144),'idPrefix':_0x28cd52(0x126),'variants':[{'value':0x8,'text':_0x28cd52(0x155)},{'value':0xb,'text':_0x28cd52(0x16e)},{'value':0xd,'text':_0x28cd52(0x169)},{'value':0xf,'text':_0x28cd52(0x13c)}]}},_0x87ba7c=['trangbt',_0x28cd52(0x161),_0x28cd52(0x12d),_0x28cd52(0x150),_0x28cd52(0x143)],_0x2ecbe0=0x4e20,_0x25819b=new Date('2025-08-22T15:00:00')['getTime']();let _0x55af21='kalimba17',_0x2c6879=0x0,_0x173559=![];const _0xa6b141=document[_0x28cd52(0x188)](_0x28cd52(0x170)),_0x3caedc=document[_0x28cd52(0x188)](_0x28cd52(0x164)),_0x3c5bdd=document[_0x28cd52(0x188)]('variants-wrapper'),_0x256afb=document['querySelectorAll'](_0x28cd52(0x15c)),_0x40d7b6=document[_0x28cd52(0x188)](_0x28cd52(0x18f)),_0x88d673=document[_0x28cd52(0x188)]('max-price'),_0x384e96=document[_0x28cd52(0x188)](_0x28cd52(0x17a)),_0x5cec99=document[_0x28cd52(0x188)]('progress-bar'),_0x1f2563=document[_0x28cd52(0x188)](_0x28cd52(0x12a)),_0x2d37a4=document[_0x28cd52(0x188)](_0x28cd52(0x135)),_0x41107=document[_0x28cd52(0x188)]('start-date-display');_0x41107['textContent']=formatDate(_0x25819b);const _0x438f61=document['getElementById']('end-date-display'),_0x424f41=document[_0x28cd52(0x163)](_0x28cd52(0x122)),_0x2248c9=document[_0x28cd52(0x188)](_0x28cd52(0x13b)),_0x1b8a81=document['getElementById'](_0x28cd52(0x15d)),_0x465e10=document[_0x28cd52(0x188)](_0x28cd52(0x125)),_0x53409b=document[_0x28cd52(0x188)](_0x28cd52(0x156)),_0x5558a9=document[_0x28cd52(0x188)](_0x28cd52(0x16b)),_0x27574b=document['getElementById']('tong_tien_thanh_toan'),_0x1715a6=document[_0x28cd52(0x188)](_0x28cd52(0x174)),_0x5c8578=document[_0x28cd52(0x188)](_0x28cd52(0x166));function _0x480b3b(){const _0x3619d8=_0x28cd52,_0x5a8503=parseInt(_0x465e10['value'])||0x1,_0x390c1d=_0x5a8503*_0x2c6879,_0x5c7748=_0x390c1d>0x0?_0x2ecbe0:0x0,_0x1a8bd3=_0x390c1d+_0x5c7748;_0x2248c9[_0x3619d8(0x152)]=_0x5c7748['toLocaleString'](_0x3619d8(0x120))+'đ',_0x1b8a81[_0x3619d8(0x152)]=_0x1a8bd3[_0x3619d8(0x127)](_0x3619d8(0x120))+'đ',_0x27574b[_0x3619d8(0x130)]=_0x1a8bd3,_0x1715a6[_0x3619d8(0x130)]=JSON[_0x3619d8(0x14a)]({[_0x55af21]:_0x5a8503});}function _0x4b1898(){const _0x207244=_0x28cd52,_0x56e2d2=Date[_0x207244(0x172)](),_0xd8b7ad=_0x56e2d2-_0x25819b,_0x374efe=_0x2a2d72[_0x207244(0x179)](_0x585165=>_0x585165['id']===_0x55af21);if(!_0x374efe||_0xd8b7ad<0x0)_0x2c6879=_0x374efe?_0x374efe[_0x207244(0x18c)]:0x0,_0x5cec99[_0x207244(0x181)][_0x207244(0x183)]='0%',_0x1f2563[_0x207244(0x18d)]['innerHTML']='<span\x20class=\x22font-bold\x20text-white\x22>Chương\x20trình\x20sắp\x20bắt\x20đầu!</span>';else{const {startPrice:_0x4cd9a5,maxPrice:_0x572832}=_0x374efe,_0x52eced=0x1,_0x1c764e=0x1e*0x3e8,_0xca1fe1=Math[_0x207244(0x12f)](_0xd8b7ad/_0x1c764e);_0x2c6879=_0x4cd9a5+_0xca1fe1*_0x52eced;_0x2c6879>_0x572832&&(_0x2c6879=_0x572832);const _0x1d628e=_0x572832-_0x4cd9a5,_0x586b70=_0x2c6879-_0x4cd9a5,_0x25992e=_0x1d628e>0x0?_0x586b70/_0x1d628e*0x64:0x64;_0x5cec99['style'][_0x207244(0x183)]=_0x25992e+'%';const _0x32549e=_0x1d628e*_0x1c764e,_0x322136=_0x25819b+_0x32549e;_0x438f61[_0x207244(0x152)]=formatDate(_0x322136);if(_0x2c6879<_0x572832){const _0x26ce9c=_0x1c764e-_0xd8b7ad%_0x1c764e;_0x1f2563[_0x207244(0x152)]=Math[_0x207244(0x149)](_0x26ce9c/0x3e8);const _0x21bd20=_0x26ce9c/_0x1c764e*0x64;_0x424f41[_0x207244(0x11e)](_0xe25439=>_0xe25439['style']['width']=_0x21bd20+'%');}else _0x1f2563[_0x207244(0x18d)][_0x207244(0x123)]=_0x207244(0x12e);}const _0xc8d692=_0x173559?_0x2c6879-0x4e20:_0x2c6879,_0x3f08a8=(_0xc8d692>0x0?_0xc8d692:0x0)[_0x207244(0x127)]('vi-VN')+'đ';_0x384e96[_0x207244(0x152)]=_0x3f08a8,_0x2d37a4['textContent']=_0x3f08a8,_0x480b3b();}function _0x49e2a2(){const _0x57f3ef=_0x28cd52,_0x451e5c=_0x50abbf(_0x55af21);if(!_0x451e5c)return;const _0x55d4cd=_0x2a2d72[_0x57f3ef(0x179)](_0xa3b770=>_0xa3b770['id']===_0x55af21);if(!_0x55d4cd)return;_0x256afb[_0x57f3ef(0x11e)](_0x798662=>_0x798662[_0x57f3ef(0x185)]=_0x55d4cd[_0x57f3ef(0x154)]),_0x40d7b6[_0x57f3ef(0x185)]=_0x55d4cd[_0x57f3ef(0x18c)][_0x57f3ef(0x127)](_0x57f3ef(0x120))+'đ',_0x88d673[_0x57f3ef(0x185)]=_0x55d4cd['maxPrice']['toLocaleString'](_0x57f3ef(0x120))+'đ',_0x3caedc['querySelectorAll'](_0x57f3ef(0x16c))['forEach'](_0x73d645=>{const _0x2db9e9=_0x57f3ef;_0x73d645[_0x2db9e9(0x145)][_0x2db9e9(0x16f)](_0x2db9e9(0x13f),_0x73d645[_0x2db9e9(0x16a)][_0x2db9e9(0x151)]===_0x451e5c['typeKey']);}),_0x3c5bdd[_0x57f3ef(0x163)](_0x57f3ef(0x121))[_0x57f3ef(0x11e)](_0x2edaf9=>{const _0x2bc40a=_0x57f3ef;_0x2edaf9[_0x2bc40a(0x145)][_0x2bc40a(0x16f)](_0x2bc40a(0x173),_0x2edaf9['id']!==_0x451e5c['typeKey']+'-variants');}),_0x3c5bdd['querySelectorAll'](_0x57f3ef(0x11c))['forEach'](_0x4fb94b=>{const _0x73e163=_0x57f3ef;_0x4fb94b[_0x73e163(0x145)]['toggle'](_0x73e163(0x13f),_0x4fb94b[_0x73e163(0x16a)]['id']===_0x55af21);}),_0x465e10['value']=0x1,_0x4b1898();}function _0x9aafc(){const _0x34e222=_0x28cd52;for(const _0x5b603d in _0x393ca3){const _0x210212=_0x393ca3[_0x5b603d],_0x59b3be=document[_0x34e222(0x168)]('div');_0x59b3be[_0x34e222(0x15e)]='option-btn',_0x59b3be[_0x34e222(0x152)]=_0x210212[_0x34e222(0x154)],_0x59b3be[_0x34e222(0x16a)]['type']=_0x5b603d,_0x3caedc[_0x34e222(0x178)](_0x59b3be);const _0x5e4869=document[_0x34e222(0x168)](_0x34e222(0x175));_0x5e4869['id']=_0x5b603d+_0x34e222(0x147),_0x5e4869[_0x34e222(0x15e)]='variant-group';const _0x52ea8b=document['createElement']('h4');_0x52ea8b[_0x34e222(0x152)]='Chọn\x20Phiên\x20Bản\x20'+_0x210212[_0x34e222(0x154)];const _0x2534ab=document[_0x34e222(0x168)]('div');_0x2534ab[_0x34e222(0x15e)]='options-container',_0x210212[_0x34e222(0x18e)][_0x34e222(0x11e)](_0x51487b=>{const _0x20e6e1=_0x34e222,_0x32a43c=document[_0x20e6e1(0x168)](_0x20e6e1(0x175));_0x32a43c[_0x20e6e1(0x15e)]=_0x20e6e1(0x14b),_0x32a43c[_0x20e6e1(0x152)]=_0x51487b[_0x20e6e1(0x17e)],_0x32a43c[_0x20e6e1(0x16a)]['id']=''+_0x210212['idPrefix']+_0x51487b['value'],_0x2534ab[_0x20e6e1(0x178)](_0x32a43c);}),_0x5e4869[_0x34e222(0x136)](_0x52ea8b,_0x2534ab),_0x3c5bdd[_0x34e222(0x178)](_0x5e4869);}}function _0x50abbf(_0x30b2c3){const _0x3ee4fa=_0x28cd52;for(const _0x3e7688 in _0x393ca3){const _0x5247bc=_0x393ca3[_0x3e7688];if(_0x30b2c3[_0x3ee4fa(0x14c)](_0x5247bc['idPrefix'])){const _0x18dbf2=parseInt(_0x30b2c3[_0x3ee4fa(0x146)](_0x5247bc['idPrefix'],''),0xa),_0x19065c=_0x5247bc['variants'][_0x3ee4fa(0x179)](_0x1c9265=>_0x1c9265[_0x3ee4fa(0x130)]===_0x18dbf2);if(_0x19065c)return{'typeKey':_0x3e7688,'product':_0x5247bc,'variant':_0x19065c};}}return null;}_0x5558a9[_0x28cd52(0x159)](_0x28cd52(0x15f),()=>{const _0x5dce41=_0x28cd52;_0x465e10[_0x5dce41(0x130)]=parseInt(_0x465e10[_0x5dce41(0x130)],0xa)+0x1,_0x480b3b();}),_0x53409b[_0x28cd52(0x159)](_0x28cd52(0x15f),()=>{const _0xbcef7a=_0x28cd52;let _0x5cda5d=parseInt(_0x465e10[_0xbcef7a(0x130)],0xa);_0x5cda5d>0x1&&(_0x465e10[_0xbcef7a(0x130)]=_0x5cda5d-0x1,_0x480b3b());}),_0x465e10[_0x28cd52(0x159)](_0x28cd52(0x167),()=>{const _0x381cda=_0x28cd52;(parseInt(_0x465e10[_0x381cda(0x130)],0xa)<0x1||isNaN(parseInt(_0x465e10[_0x381cda(0x130)],0xa)))&&(_0x465e10['value']=0x1),_0x480b3b();}),_0x3caedc[_0x28cd52(0x159)](_0x28cd52(0x15f),_0x3c9445=>{const _0x137da4=_0x28cd52,_0x3a41dd=_0x3c9445[_0x137da4(0x153)]['closest'](_0x137da4(0x16c));if(!_0x3a41dd)return;const _0x32a636=_0x3a41dd['dataset'][_0x137da4(0x151)],_0x23637a=_0x50abbf(_0x55af21);if(_0x23637a&&_0x23637a[_0x137da4(0x13e)]!==_0x32a636){const _0x408511=_0x393ca3[_0x32a636]['variants'][0x0];_0x55af21=''+_0x393ca3[_0x32a636][_0x137da4(0x13a)]+_0x408511[_0x137da4(0x130)],_0x49e2a2();}}),_0x3c5bdd[_0x28cd52(0x159)](_0x28cd52(0x15f),_0x33368f=>{const _0x3bf3ba=_0x28cd52,_0x161d0a=_0x33368f[_0x3bf3ba(0x153)][_0x3bf3ba(0x14f)]('.variant-option');if(!_0x161d0a)return;_0x55af21=_0x161d0a[_0x3bf3ba(0x16a)]['id'],_0x49e2a2();}),_0xa6b141['addEventListener']('submit',_0x282361=>{const _0x401ab1=_0x28cd52;_0x282361[_0x401ab1(0x140)](),_0x480b3b();if(!_0x1715a6['value']||_0x1715a6[_0x401ab1(0x130)]==='{}'){alert(_0x401ab1(0x165));return;}fetch(_0xa6b141[_0x401ab1(0x142)],{'method':_0x401ab1(0x141),'mode':_0x401ab1(0x138),'body':new FormData(_0xa6b141)})[_0x401ab1(0x18b)](()=>{const _0x10eb68=_0x401ab1;alert(_0x10eb68(0x14d)),_0xa6b141[_0x10eb68(0x176)](),_0x49e2a2();})[_0x401ab1(0x139)](_0x239c05=>{const _0x2a320f=_0x401ab1;console[_0x2a320f(0x18a)](_0x2a320f(0x133),_0x239c05),alert(_0x2a320f(0x189));});});const _0x5d8655=new URLSearchParams(window[_0x28cd52(0x177)][_0x28cd52(0x12c)]),_0x540660=_0x5d8655[_0x28cd52(0x182)](_0x28cd52(0x134));_0x540660&&_0x87ba7c[_0x28cd52(0x179)](_0x3af680=>_0x3af680[_0x28cd52(0x12b)]()===_0x540660[_0x28cd52(0x12b)]())&&(_0x173559=!![],_0x5c8578[_0x28cd52(0x130)]=_0x540660[_0x28cd52(0x16d)]()),_0x9aafc(),_0x49e2a2(),setInterval(_0x4b1898,0x3e8);});
+lucide.createIcons();
+const formatDate = (timestamp) => {
+      const date = new Date(timestamp);
+      
+      const day = String(date.getDate()).padStart(2, '0');
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const year = date.getFullYear();
+      return `${day}/${month}/${year}`;
+    };
+document.addEventListener('DOMContentLoaded', function () {
+  // --- DỮ LIỆU SẢN PHẨM & TRẠNG THÁI ---
+  const products = [
+    { id: 'kalimba17', name: 'Bộ LED cho đàn Kalimba 17 phím', startPrice: 119000, maxPrice: 219000 },
+    { id: 'kalimba21', name: 'Bộ LED cho đàn Kalimba 21 phím', startPrice: 129000, maxPrice: 229000 },
+    { id: 'tank15', name: 'Bộ LED cho trống lưỡi thép 15 nốt', startPrice: 149000, maxPrice: 249000 },
+    { id: 'tank13', name: 'Bộ LED cho trống lưỡi thép 13 nốt', startPrice: 139000, maxPrice: 239000 },
+    { id: 'tank11', name: 'Bộ LED cho trống lưỡi thép 11 nốt', startPrice: 129000, maxPrice: 229000 },
+    { id: 'tank8', name: 'Bộ LED cho trống lưỡi 8 nốt', startPrice: 119000, maxPrice: 219000 },
+  ];
+
+  const productsData = {
+    kalimba: {
+      name: "Đàn Kalimba",
+      idPrefix: "kalimba",
+      variants: [{ value: 17, text: "17 phím" }, { value: 21, text: "21 phím" }]
+    },
+    tankdrum: {
+      name: "Trống Lưỡi Thép",
+      idPrefix: "tank",
+      variants: [{ value: 8, text: "8 nốt" }, { value: 11, text: "11 nốt" }, { value: 13, text: "13 nốt" }, { value: 15, text: "15 nốt" }]
+    }
+  };
+
+  const validRefs = ['trangbt', 'lamnt', 'lent', 'giapnt', 'thuynt'];
+  const SHIPPING_COST = 20000;
+  const startTime = new Date('2025-08-24T19:00:00').getTime();
+
+  let selectedId = 'kalimba17';
+  let currentPrice = 0;
+  let isRefValid = false;
+
+  // --- LẤY CÁC PHẦN TỬ DOM ---
+  const orderForm = document.getElementById('orderForm');
+  // DOM cho phần chọn sản phẩm
+  const typeContainer = document.getElementById('instrument-type-container');
+  const variantsWrapper = document.getElementById('variants-wrapper');
+  const productNameDivs = document.querySelectorAll('.product-name');
+  // DOM cho phần giá động
+  const startPriceDiv = document.getElementById('start-price');
+  const maxPriceDiv = document.getElementById('max-price');
+  const currentPriceEl = document.getElementById('current-price');
+  const progressBarEl = document.getElementById('progress-bar');
+  const countdownEl = document.getElementById('countdown');
+  const ctaPriceEl = document.getElementById('cta-price');
+  const startDateDisplayEl = document.getElementById('start-date-display');
+  startDateDisplayEl.innerText = formatDate(startTime);
+  const endDateDisplayEl = document.getElementById('end-date-display');
+  const footerCountdownBarEls = document.querySelectorAll('.countdown-bar');
+  // DOM cho phần đơn hàng
+  const shippingCostEl = document.getElementById('shipping-cost');
+  const totalPriceEl = document.getElementById('total-price');
+  const qtyInput = document.getElementById('quantity-input');
+  const qtyMinusBtn = document.getElementById('qty-minus');
+  const qtyPlusBtn = document.getElementById('qty-plus');
+  // DOM cho các trường ẩn của form
+  const hiddenTotalPriceEl = document.getElementById('tong_tien_thanh_toan');
+  const hiddenOrderDetailsEl = document.getElementById('chi_tiet_don_hang');
+  const hiddenRefCodeEl = document.getElementById('ref_code');
+
+
+  // --- HÀM TÍNH TOÁN & CẬP NHẬT ---
+
+  function updateOrder() {
+    const quantity = parseInt(qtyInput.value) || 1;
+    const subtotal = quantity * currentPrice;
+    const shippingCost = subtotal > 0 ? SHIPPING_COST : 0;
+    const finalTotal = subtotal + shippingCost;
+
+    shippingCostEl.textContent = shippingCost.toLocaleString('vi-VN') + 'đ';
+    totalPriceEl.textContent = finalTotal.toLocaleString('vi-VN') + 'đ';
+
+    hiddenTotalPriceEl.value = finalTotal;
+    hiddenOrderDetailsEl.value = JSON.stringify({ [selectedId]: quantity });
+  }
+
+  function updatePriceDisplay() {
+    const now = Date.now();
+    const elapsedTimeMs = now - startTime;
+    const selectedProduct = products.find(p => p.id === selectedId);
+
+    if (!selectedProduct || elapsedTimeMs < 0) {
+      currentPrice = selectedProduct ? selectedProduct.startPrice : 0;
+      progressBarEl.style.width = `0%`;
+      countdownEl.parentElement.innerHTML = '<span class="font-bold text-white">Chương trình sắp bắt đầu!</span>';
+    } else {
+      const { startPrice, maxPrice } = selectedProduct;
+      const increaseAmount = 1;
+      const increaseIntervalMs = 30 * 1000;
+      
+      const numberOfIncreases = Math.floor(elapsedTimeMs / increaseIntervalMs);
+      currentPrice = startPrice + (numberOfIncreases * increaseAmount);
+      if (currentPrice > maxPrice) {
+        currentPrice = maxPrice;
+      }
+      
+      const totalIncrease = maxPrice - startPrice;
+      const totalMs = increaseIntervalMs * totalIncrease;
+      const endTime = startTime + totalMs;
+      endDateDisplayEl.innerText = formatDate(endTime);
+
+      const currentIncrease = currentPrice - startPrice;
+      const progressPercentage = totalIncrease > 0 ? (currentIncrease / totalIncrease) * 100 : 100;
+      progressBarEl.style.width = `${progressPercentage}%`;
+
+      if (currentPrice < maxPrice) {
+        const timeUntilNextIncrease = increaseIntervalMs - (elapsedTimeMs % increaseIntervalMs);
+        countdownEl.textContent = Math.ceil(timeUntilNextIncrease / 1000);
+        const countdownBarPercentage = (timeUntilNextIncrease / increaseIntervalMs) * 100;
+        footerCountdownBarEls.forEach(bar => bar.style.width = `${countdownBarPercentage}%`);
+      } else {
+        countdownEl.parentElement.innerHTML = '<span class="font-bold text-white">Đã đạt giá cuối cùng!</span>';
+      }
+    }
+
+    const saleOffPrice = isRefValid ? currentPrice - 20000 : currentPrice;
+    const formattedPrice = (saleOffPrice > 0 ? saleOffPrice : 0).toLocaleString('vi-VN') + 'đ';
+    currentPriceEl.textContent = formattedPrice;
+    ctaPriceEl.textContent = formattedPrice;
+
+    updateOrder();
+  }
+
+  function updateUI() {
+    const info = getProductInfoFromId(selectedId);
+    if (!info) return;
+
+    const selectedProductData = products.find(p => p.id === selectedId);
+    if (!selectedProductData) return;
+
+    productNameDivs.forEach(div => div.innerText = selectedProductData.name);
+    startPriceDiv.innerText = selectedProductData.startPrice.toLocaleString('vi-VN') + "đ";
+    maxPriceDiv.innerText = selectedProductData.maxPrice.toLocaleString('vi-VN') + "đ";
+    
+    typeContainer.querySelectorAll('.option-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.type === info.typeKey);
+    });
+
+    variantsWrapper.querySelectorAll('.variant-group').forEach(group => {
+      group.classList.toggle('hidden', group.id !== `${info.typeKey}-variants`);
+    });
+
+    variantsWrapper.querySelectorAll('.variant-option').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.id === selectedId);
+    });
+
+    qtyInput.value = 1; // Reset số lượng về 1 khi đổi sản phẩm
+    updatePriceDisplay();
+  }
+
+  function renderUI() {
+    for (const typeKey in productsData) {
+      const product = productsData[typeKey];
+      const typeBtn = document.createElement('div');
+      typeBtn.className = 'option-btn';
+      typeBtn.textContent = product.name;
+      typeBtn.dataset.type = typeKey;
+      typeContainer.appendChild(typeBtn);
+
+      const variantGroup = document.createElement('div');
+      variantGroup.id = `${typeKey}-variants`;
+      variantGroup.className = 'variant-group';
+
+      const title = document.createElement('h4');
+      title.textContent = `Chọn Phiên Bản ${product.name}`;
+      const optionsContainer = document.createElement('div');
+      optionsContainer.className = 'options-container';
+
+      product.variants.forEach(variant => {
+        const variantBtn = document.createElement('div');
+        variantBtn.className = 'option-btn variant-option';
+        variantBtn.textContent = variant.text;
+        variantBtn.dataset.id = `${product.idPrefix}${variant.value}`;
+        optionsContainer.appendChild(variantBtn);
+      });
+
+      variantGroup.append(title, optionsContainer);
+      variantsWrapper.appendChild(variantGroup);
+    }
+  }
+
+  function getProductInfoFromId(id) {
+    for (const typeKey in productsData) {
+      const product = productsData[typeKey];
+      if (id.startsWith(product.idPrefix)) {
+        const variantValue = parseInt(id.replace(product.idPrefix, ''), 10);
+        const variant = product.variants.find(v => v.value === variantValue);
+        if (variant) return { typeKey, product, variant };
+      }
+    }
+    return null;
+  }
+
+  // --- GẮN SỰ KIỆN ---
+
+  qtyPlusBtn.addEventListener('click', () => {
+    qtyInput.value = parseInt(qtyInput.value, 10) + 1;
+    updateOrder();
+  });
+
+  qtyMinusBtn.addEventListener('click', () => {
+    let currentQty = parseInt(qtyInput.value, 10);
+    if (currentQty > 1) {
+      qtyInput.value = currentQty - 1;
+      updateOrder();
+    }
+  });
+
+  qtyInput.addEventListener('input', () => {
+    if (parseInt(qtyInput.value, 10) < 1 || isNaN(parseInt(qtyInput.value, 10))) {
+      qtyInput.value = 1;
+    }
+    updateOrder();
+  });
+
+  typeContainer.addEventListener('click', (event) => {
+    const clickedBtn = event.target.closest('.option-btn');
+    if (!clickedBtn) return;
+
+    const typeKey = clickedBtn.dataset.type;
+    const currentInfo = getProductInfoFromId(selectedId);
+    
+    if (currentInfo && currentInfo.typeKey !== typeKey) {
+      const firstVariant = productsData[typeKey].variants[0];
+      selectedId = `${productsData[typeKey].idPrefix}${firstVariant.value}`;
+      updateUI();
+    }
+  });
+
+  variantsWrapper.addEventListener('click', (event) => {
+    const clickedBtn = event.target.closest('.variant-option');
+    if (!clickedBtn) return;
+    selectedId = clickedBtn.dataset.id;
+    updateUI();
+  });
+
+  orderForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    updateOrder();
+    if (!hiddenOrderDetailsEl.value || hiddenOrderDetailsEl.value === '{}') {
+      alert('Bạn vui lòng chọn ít nhất một sản phẩm.');
+      return;
+    }
+    fetch(orderForm.action, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: new FormData(orderForm)
+    }).then(() => {
+      alert('Đơn hàng của bạn đã được gửi đi! Cảm ơn bạn.');
+      orderForm.reset();
+      updateUI(); // Reset giao diện về trạng thái ban đầu
+    }).catch(error => {
+      console.error('Error:', error);
+      alert('Đã có lỗi xảy ra, vui lòng thử lại.');
+    });
+  });
+
+  // --- KHỞI CHẠY ---
+  const urlParams = new URLSearchParams(window.location.search);
+  const refCode = urlParams.get('ref');
+  if (refCode && validRefs.find((r) => r.toLowerCase() === refCode.toLowerCase())) {
+    isRefValid = true;
+    hiddenRefCodeEl.value = refCode.toUpperCase();
+  }
+
+  renderUI();
+  updateUI();
+  setInterval(updatePriceDisplay, 1000);
+});
